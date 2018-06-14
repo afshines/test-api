@@ -50,7 +50,7 @@ class AuthController extends Controller
     {
         return new JsonResponse([
             'message' => 'invalid_credentials'
-        ], Response::HTTP_UNAUTHORIZED);
+        ]);
     }
     /**
      * What response should be returned on error while generate JWT.
@@ -61,7 +61,7 @@ class AuthController extends Controller
     {
         return new JsonResponse([
             'message' => 'could_not_create_token'
-        ], Response::HTTP_INTERNAL_SERVER_ERROR);
+        ]);
     }
     /**
      * What response should be returned on authorized.
